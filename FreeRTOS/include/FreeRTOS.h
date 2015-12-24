@@ -103,6 +103,9 @@ extern "C" {
 /* Definitions specific to the port being used. */
 #include "portable.h"
 
+/* trace */
+#include "trcKernelPort.h"
+	
 /*
  * Check all the required application specific macros have been defined.
  * These macros are application specific and (as downloaded) are defined
