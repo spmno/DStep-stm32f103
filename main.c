@@ -19,7 +19,10 @@ static void vLEDTask( void *pvParameters );
 
 int main()
 {
-	
+	vTraceInitTraceData();
+	if (! uiTraceStart() ) {
+		vTraceConsoleMessage("Could not start recorder!");
+	}
 	LED_GPIO_Config();
 	xTaskCreate( vLEDTask, ( const portCHAR * ) "LED", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY+3, NULL );
 	vTaskStartScheduler();  
