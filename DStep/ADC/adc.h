@@ -8,8 +8,17 @@
 #define ADC_CH2  2 //通道2
 #define ADC_CH3  3 //通道3	   
 */
+#ifdef __cplusplus
+extern "C" {
+#endif 
  
 void Adc_Init(void);
 u16  Get_Adc(u8 ch);  
+
+int analogRead(int pin);
  
+#ifdef __cplusplus
+}
+#endif	
+	
 #endif 

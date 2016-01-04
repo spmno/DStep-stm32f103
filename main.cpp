@@ -1,19 +1,5 @@
-#include <stm32f10x_conf.h>
 
-#include "GPIO/LED.h"
-#include "CAN/CAN.h"
-#include "I2C/I2C.h"
-#include "KEY/key.h"
-#include "PWM/pwm.h"
-#include "Motor/motor.h"
-#include "Uart/uart.h"
-#include "SPI/spi.h"
-#include "Temperature/Temperature.h"
-
-//free rt os
-#include "FreeRTOS.h"  
-#include "task.h"  
-#include "queue.h"  
+#include "DStep/DStep.h"
 
 static void vLEDTask( void *pvParameters );  
 
@@ -26,7 +12,7 @@ int main()
 	if (! uiTraceStart() ) {
 		vTraceConsoleMessage("Could not start recorder!");
 	}
-	LED_GPIO_Config();
+	//LED_GPIO_Config();
 	Temperature_Config();
 	adc_value = Get_Temperature();
 	temperature= (1.42 - adc_value*3.3/4096)*1000/4.35 + 25;

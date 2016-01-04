@@ -1,6 +1,5 @@
 #include "stm32f10x_conf.h"
 #include "key.h"
-#include "../can/can.h"
 
 static void NVIC_Configuration(void)
 {
@@ -57,7 +56,6 @@ void KEY_GPIO_Config(void)
 
 void EXTI15_10_IRQHandler(void)
 {
-	CAN_Test_Function1();
 	EXTI_ClearFlag(EXTI_Line15);
 }
 

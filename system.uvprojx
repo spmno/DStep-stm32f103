@@ -373,7 +373,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\FreeRTOS\include;.\FreeRTOS-Plus-Trace\Include</IncludePath>
+              <IncludePath>.\DStep\FreeRTOS\include;.\DStep\FreeRTOS-Plus-Trace\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -417,394 +417,299 @@
           <GroupName>Main</GroupName>
           <Files>
             <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\main.c</FilePath>
+              <FileName>main.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\main.cpp</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>FreeRTOS</GroupName>
+          <GroupName>DStep</GroupName>
           <Files>
             <File>
               <FileName>croutine.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\FreeRTOS\croutine.c</FilePath>
+              <FilePath>.\DStep\FreeRTOS\croutine.c</FilePath>
             </File>
             <File>
               <FileName>event_groups.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\FreeRTOS\event_groups.c</FilePath>
+              <FilePath>.\DStep\FreeRTOS\event_groups.c</FilePath>
             </File>
             <File>
               <FileName>heap_2.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\FreeRTOS\heap_2.c</FilePath>
+              <FilePath>.\DStep\FreeRTOS\heap_2.c</FilePath>
             </File>
             <File>
               <FileName>list.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\FreeRTOS\list.c</FilePath>
+              <FilePath>.\DStep\FreeRTOS\list.c</FilePath>
             </File>
             <File>
               <FileName>port.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\FreeRTOS\port.c</FilePath>
+              <FilePath>.\DStep\FreeRTOS\port.c</FilePath>
             </File>
             <File>
               <FileName>queue.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\FreeRTOS\queue.c</FilePath>
-            </File>
-            <File>
-              <FileName>readme.txt</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\FreeRTOS\readme.txt</FilePath>
+              <FilePath>.\DStep\FreeRTOS\queue.c</FilePath>
             </File>
             <File>
               <FileName>tasks.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\FreeRTOS\tasks.c</FilePath>
+              <FilePath>.\DStep\FreeRTOS\tasks.c</FilePath>
             </File>
             <File>
               <FileName>timers.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\FreeRTOS\timers.c</FilePath>
+              <FilePath>.\DStep\FreeRTOS\timers.c</FilePath>
             </File>
             <File>
               <FileName>croutine.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS\include\croutine.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS\include\croutine.h</FilePath>
             </File>
             <File>
               <FileName>deprecated_definitions.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS\include\deprecated_definitions.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS\include\deprecated_definitions.h</FilePath>
             </File>
             <File>
               <FileName>event_groups.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS\include\event_groups.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS\include\event_groups.h</FilePath>
             </File>
             <File>
               <FileName>FreeRTOS.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS\include\FreeRTOS.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS\include\FreeRTOS.h</FilePath>
             </File>
             <File>
               <FileName>FreeRTOSConfig.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS\include\FreeRTOSConfig.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS\include\FreeRTOSConfig.h</FilePath>
             </File>
             <File>
               <FileName>list.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS\include\list.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS\include\list.h</FilePath>
             </File>
             <File>
               <FileName>mpu_wrappers.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS\include\mpu_wrappers.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS\include\mpu_wrappers.h</FilePath>
             </File>
             <File>
               <FileName>portable.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS\include\portable.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS\include\portable.h</FilePath>
             </File>
             <File>
               <FileName>portmacro.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS\include\portmacro.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS\include\portmacro.h</FilePath>
             </File>
             <File>
               <FileName>projdefs.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS\include\projdefs.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS\include\projdefs.h</FilePath>
             </File>
             <File>
               <FileName>queue.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS\include\queue.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS\include\queue.h</FilePath>
             </File>
             <File>
               <FileName>semphr.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS\include\semphr.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS\include\semphr.h</FilePath>
             </File>
             <File>
               <FileName>StackMacros.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS\include\StackMacros.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS\include\StackMacros.h</FilePath>
             </File>
             <File>
               <FileName>task.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS\include\task.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS\include\task.h</FilePath>
             </File>
             <File>
               <FileName>timers.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS\include\timers.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS\include\timers.h</FilePath>
             </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>GPIO</GroupName>
-          <Files>
-            <File>
-              <FileName>LED.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\GPIO\LED.c</FilePath>
-            </File>
-            <File>
-              <FileName>LED.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\GPIO\LED.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>CAN</GroupName>
-          <Files>
-            <File>
-              <FileName>can.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\CAN\can.c</FilePath>
-            </File>
-            <File>
-              <FileName>can.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\CAN\can.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>I2C</GroupName>
-          <Files>
-            <File>
-              <FileName>I2C.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\I2C\I2C.c</FilePath>
-            </File>
-            <File>
-              <FileName>I2C.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\I2C\I2C.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>KEY</GroupName>
-          <Files>
-            <File>
-              <FileName>key.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\KEY\key.c</FilePath>
-            </File>
-            <File>
-              <FileName>key.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\KEY\key.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>PWM</GroupName>
-          <Files>
-            <File>
-              <FileName>pwm.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\PWM\pwm.c</FilePath>
-            </File>
-            <File>
-              <FileName>pwm.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\PWM\pwm.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>ADC</GroupName>
-          <Files>
             <File>
               <FileName>adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\ADC\adc.c</FilePath>
+              <FilePath>.\DStep\ADC\adc.c</FilePath>
             </File>
             <File>
               <FileName>adc.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\ADC\adc.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>UART</GroupName>
-          <Files>
-            <File>
-              <FileName>uart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\UART\uart.c</FilePath>
+              <FilePath>.\DStep\ADC\adc.h</FilePath>
             </File>
             <File>
-              <FileName>uart.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\UART\uart.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>SPI</GroupName>
-          <Files>
-            <File>
-              <FileName>spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\SPI\spi.c</FilePath>
-            </File>
-            <File>
-              <FileName>spi.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\SPI\spi.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>MOTOR</GroupName>
-          <Files>
-            <File>
-              <FileName>GPIOMotor.cpp</FileName>
+              <FileName>can.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Motor\GPIOMotor.cpp</FilePath>
+              <FilePath>.\DStep\CAN\can.cpp</FilePath>
             </File>
             <File>
-              <FileName>GPIOMotor.h</FileName>
+              <FileName>can.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Motor\GPIOMotor.h</FilePath>
+              <FilePath>.\DStep\CAN\can.h</FilePath>
             </File>
-            <File>
-              <FileName>motor.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Motor\motor.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>motor.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Motor\motor.h</FilePath>
-            </File>
-            <File>
-              <FileName>MotorBase.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Motor\MotorBase.h</FilePath>
-            </File>
-            <File>
-              <FileName>PWMMotor.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Motor\PWMMotor.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>PWMMotor.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Motor\PWMMotor.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>FreeRTOSTrace</GroupName>
-          <Files>
             <File>
               <FileName>trcBase.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\FreeRTOS-Plus-Trace\trcBase.c</FilePath>
+              <FilePath>.\DStep\FreeRTOS-Plus-Trace\trcBase.c</FilePath>
             </File>
             <File>
               <FileName>trcHardwarePort.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\FreeRTOS-Plus-Trace\trcHardwarePort.c</FilePath>
+              <FilePath>.\DStep\FreeRTOS-Plus-Trace\trcHardwarePort.c</FilePath>
             </File>
             <File>
               <FileName>trcKernel.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\FreeRTOS-Plus-Trace\trcKernel.c</FilePath>
+              <FilePath>.\DStep\FreeRTOS-Plus-Trace\trcKernel.c</FilePath>
             </File>
             <File>
               <FileName>trcKernelPort.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\FreeRTOS-Plus-Trace\trcKernelPort.c</FilePath>
+              <FilePath>.\DStep\FreeRTOS-Plus-Trace\trcKernelPort.c</FilePath>
             </File>
             <File>
               <FileName>trcUser.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\FreeRTOS-Plus-Trace\trcUser.c</FilePath>
+              <FilePath>.\DStep\FreeRTOS-Plus-Trace\trcUser.c</FilePath>
             </File>
             <File>
               <FileName>trcBase.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS-Plus-Trace\Include\trcBase.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS-Plus-Trace\Include\trcBase.h</FilePath>
             </File>
             <File>
               <FileName>trcConfig.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS-Plus-Trace\Include\trcConfig.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS-Plus-Trace\Include\trcConfig.h</FilePath>
             </File>
             <File>
               <FileName>trcHardwarePort.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS-Plus-Trace\Include\trcHardwarePort.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS-Plus-Trace\Include\trcHardwarePort.h</FilePath>
             </File>
             <File>
               <FileName>trcKernel.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS-Plus-Trace\Include\trcKernel.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS-Plus-Trace\Include\trcKernel.h</FilePath>
             </File>
             <File>
               <FileName>trcKernelHooks.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS-Plus-Trace\Include\trcKernelHooks.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS-Plus-Trace\Include\trcKernelHooks.h</FilePath>
             </File>
             <File>
               <FileName>trcKernelPort.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS-Plus-Trace\Include\trcKernelPort.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS-Plus-Trace\Include\trcKernelPort.h</FilePath>
             </File>
             <File>
               <FileName>trcTypes.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS-Plus-Trace\Include\trcTypes.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS-Plus-Trace\Include\trcTypes.h</FilePath>
             </File>
             <File>
               <FileName>trcUser.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FreeRTOS-Plus-Trace\Include\trcUser.h</FilePath>
+              <FilePath>.\DStep\FreeRTOS-Plus-Trace\Include\trcUser.h</FilePath>
             </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>SDIO</GroupName>
-          <Files>
+            <File>
+              <FileName>I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\DStep\I2C\I2C.c</FilePath>
+            </File>
+            <File>
+              <FileName>I2C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\DStep\I2C\I2C.h</FilePath>
+            </File>
+            <File>
+              <FileName>key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\DStep\KEY\key.c</FilePath>
+            </File>
+            <File>
+              <FileName>key.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\DStep\KEY\key.h</FilePath>
+            </File>
+            <File>
+              <FileName>pwm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\DStep\PWM\pwm.c</FilePath>
+            </File>
+            <File>
+              <FileName>pwm.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\DStep\PWM\pwm.h</FilePath>
+            </File>
             <File>
               <FileName>sdio_sdcard.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\SDIO\sdio_sdcard.c</FilePath>
+              <FilePath>.\DStep\SDIO\sdio_sdcard.c</FilePath>
             </File>
             <File>
               <FileName>sdio_sdcard.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\SDIO\sdio_sdcard.h</FilePath>
+              <FilePath>.\DStep\SDIO\sdio_sdcard.h</FilePath>
             </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Temperature</GroupName>
-          <Files>
+            <File>
+              <FileName>spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\DStep\SPI\spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>spi.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\DStep\SPI\spi.h</FilePath>
+            </File>
             <File>
               <FileName>temperature.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Temperature\temperature.c</FilePath>
+              <FilePath>.\DStep\Temperature\temperature.c</FilePath>
             </File>
             <File>
               <FileName>temperature.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Temperature\temperature.h</FilePath>
+              <FilePath>.\DStep\Temperature\temperature.h</FilePath>
+            </File>
+            <File>
+              <FileName>uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\DStep\UART\uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>uart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\DStep\UART\uart.h</FilePath>
+            </File>
+            <File>
+              <FileName>DStep.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\DStep\DStep.h</FilePath>
+            </File>
+            <File>
+              <FileName>GPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\DStep\GPIO\GPIO.c</FilePath>
+            </File>
+            <File>
+              <FileName>GPIO.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\DStep\GPIO\GPIO.h</FilePath>
             </File>
           </Files>
         </Group>

@@ -1,5 +1,5 @@
 #include <stm32f10x_conf.h>
-#include "LED.h"
+#include "GPIO.h"
 
 #define LED_PORT GPIO_Pin_8
 //#define LED_PORT GPIO_Pin_0

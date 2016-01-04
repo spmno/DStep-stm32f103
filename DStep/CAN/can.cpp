@@ -1,6 +1,6 @@
 #include "stm32f10x_conf.h"
 #include "can.h"
-#include "../GPIO/LED.h"
+#include "../GPIO/GPIO.h"
 
 void CAN_GPIOB_Config(void) 
 {
