@@ -30,5 +30,10 @@ void InitMPU6050(void);
 void I2C_Config(void);
 unsigned short getdate(unsigned char REG_Address);
 
+class I2C
+{
+	static void begin(int speed);
+};
+
 #endif
 

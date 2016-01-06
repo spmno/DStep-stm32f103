@@ -627,19 +627,9 @@
               <FilePath>.\DStep\FreeRTOS-Plus-Trace\Include\trcUser.h</FilePath>
             </File>
             <File>
-              <FileName>I2C.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\DStep\I2C\I2C.c</FilePath>
-            </File>
-            <File>
               <FileName>I2C.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\DStep\I2C\I2C.h</FilePath>
-            </File>
-            <File>
-              <FileName>key.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\DStep\KEY\key.c</FilePath>
             </File>
             <File>
               <FileName>key.h</FileName>
@@ -667,29 +657,14 @@
               <FilePath>.\DStep\SDIO\sdio_sdcard.h</FilePath>
             </File>
             <File>
-              <FileName>spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\DStep\SPI\spi.c</FilePath>
-            </File>
-            <File>
               <FileName>spi.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\DStep\SPI\spi.h</FilePath>
             </File>
             <File>
-              <FileName>temperature.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\DStep\Temperature\temperature.c</FilePath>
-            </File>
-            <File>
               <FileName>temperature.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\DStep\Temperature\temperature.h</FilePath>
-            </File>
-            <File>
-              <FileName>uart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\DStep\UART\uart.c</FilePath>
             </File>
             <File>
               <FileName>uart.h</FileName>
@@ -710,6 +685,31 @@
               <FileName>GPIO.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\DStep\GPIO\GPIO.h</FilePath>
+            </File>
+            <File>
+              <FileName>I2C.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\DStep\I2C\I2C.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>temperature.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\DStep\Temperature\temperature.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>key.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\DStep\KEY\key.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>spi.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\DStep\SPI\spi.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>uart.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\DStep\UART\uart.cpp</FilePath>
             </File>
           </Files>
         </Group>

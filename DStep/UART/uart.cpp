@@ -32,7 +32,7 @@ void UART_Init()
 }
 
 ///重定向c库函数printf到USART1
-int fputc(int ch, FILE *f)
+extern "C" int fputc(int ch, FILE *f)
 {
 		/* 发送一个字节数据到USART1 */
 		USART_SendData(USART3, (uint8_t) ch);
@@ -44,7 +44,7 @@ int fputc(int ch, FILE *f)
 }
 
 ///重定向c库函数scanf到USART1
-int fgetc(FILE *f)
+extern "C" int fgetc(FILE *f)
 {
 		/* 等待串口1输入数据 */
 		while (USART_GetFlagStatus(USART3, USART_FLAG_RXNE) == RESET);
