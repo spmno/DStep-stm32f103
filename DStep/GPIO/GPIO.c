@@ -4,6 +4,28 @@
 #define LED_PORT GPIO_Pin_8
 //#define LED_PORT GPIO_Pin_0
 
+static unsigned short pin_table[8] = {
+	GPIO_Pin_15,
+	GPIO_Pin_3,
+	GPIO_Pin_4,
+	GPIO_Pin_5,
+	GPIO_Pin_6,
+	GPIO_Pin_7,
+	GPIO_Pin_8,
+	GPIO_Pin_9
+};
+
+static GPIO_TypeDef* port_table[8] = {
+	GPIOA,
+	GPIOB,
+	GPIOB,
+	GPIOB,
+	GPIOB,
+	GPIOB,
+	GPIOB,
+	GPIOB
+};
+
 void LED_GPIO_Config()
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
@@ -24,3 +46,31 @@ void LED_OFF()
 {
 	GPIO_SetBits(GPIOB, LED_PORT);
 }
+
+void LED_OFF(void);
+
+// pin port, mode input, output, input_pullup
+void pinMode(int pin, int mode)
+{
+	GPIO_InitTypeDef GPIO_InitStructure;
+	if (port_table[pin] == GPIOA) {
+		RCC_APB2PeriphClockCmd( RCC_APB2Periph_GPIOA, ENABLE );
+	} else {
+		RCC_APB2PeriphClockCmd( RCC_APB2Periph_GPIOB, ENABLE );
+	}
+	
+	GPIO_InitStructure.GPIO_Pin = pin_table[pin];
+	GPIO_InitStructure.GPIO_Mode = mode;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(port_table[pin], &GPIO_InitStructure);
+}
+
+void digitalWrite(int pin, int value)
+{
+	if (value == LOW) {
+		GPIO_ResetBits(port_table[pin], pin_table[pin]);
+	} else {
+		GPIO_SetBits(port_table[pin], pin_table[pin]);
+	}
+}
+
