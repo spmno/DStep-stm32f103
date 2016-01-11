@@ -65,12 +65,17 @@ void pinMode(int pin, int mode)
 	GPIO_Init(port_table[pin], &GPIO_InitStructure);
 }
 
-void digitalWrite(int pin, int value)
+void digitalWrite(u16 pin, u8 value)
 {
 	if (value == LOW) {
 		GPIO_ResetBits(port_table[pin], pin_table[pin]);
 	} else {
 		GPIO_SetBits(port_table[pin], pin_table[pin]);
 	}
+}
+
+u8 digitalRead(u16 pin) 
+{
+	return GPIO_ReadInputDataBit(port_table[pin], pin_table[pin]);
 }
 

@@ -20,11 +20,11 @@ void LED_OFF(void);
 void pinMode(int pin, int mode);
 
 // pin port, value HIGH, LOW
-void digitalWrite(int pin, int value);
+void digitalWrite(u16 pin, u8 value);
 
 // pin port, 
 // return value, HIGH, LOW
-int digitalRead(int pin);
+u8 digitalRead(u16 pin);
 
 #ifdef __cplusplus
 }
