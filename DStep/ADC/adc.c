@@ -66,6 +66,21 @@ u16 Get_Adc(u8 ch)
 	return result;	//返回平均值
 }
 
+int analogRead(u16 pin)
+{
+	unsigned int result=0;
+	unsigned char i;
+
+  //设置指定ADC的规则组通道，设置它们的转化顺序和采样时间
+	ADC_RegularChannelConfig(ADC1, pin, 1, ADC_SampleTime_239Cycles5 );	//ADC1,ADC通道ch,规则采样顺序值序列为1,采样时间为239.5周期	  			    
+  for(i=0;i<8;i++) {
+		ADC_SoftwareStartConvCmd(ADC1, ENABLE);		//使能指定的ADC1的软件转换启动功能	 
+		while(!ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC ));//等待转换结束
+		result+=ADC_GetConversionValue(ADC1);
+	}
+	result=result/8;	 //取8次采样的平均值
+	return result;	//返回平均值
+}
 
 
 
