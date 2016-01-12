@@ -12,9 +12,6 @@ extern "C" {
 #define HIGH						1
 #define LOW							0
 	
-void LED_GPIO_Config(void);
-void LED_ON(void);
-void LED_OFF(void);
 
 // pin port, mode input, output, input_pullup
 void pinMode(int pin, int mode);
@@ -25,6 +22,7 @@ void digitalWrite(u16 pin, u8 value);
 // pin port, 
 // return value, HIGH, LOW
 u8 digitalRead(u16 pin);
+
 
 #ifdef __cplusplus
 }

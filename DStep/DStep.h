@@ -6,7 +6,7 @@
 #include "GPIO/GPIO.h"
 #include "CAN/CAN.h"
 #include "I2C/I2C.h"
-#include "KEY/key.h"
+#include "Interrupt/ExternalInterrupt.h"
 #include "PWM/pwm.h"
 #include "Motor/motor.h"
 #include "Uart/uart.h"

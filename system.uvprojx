@@ -178,7 +178,7 @@
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -632,11 +632,6 @@
               <FilePath>.\DStep\I2C\I2C.h</FilePath>
             </File>
             <File>
-              <FileName>key.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\DStep\KEY\key.h</FilePath>
-            </File>
-            <File>
               <FileName>pwm.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\DStep\PWM\pwm.c</FilePath>
@@ -697,11 +692,6 @@
               <FilePath>.\DStep\Temperature\temperature.cpp</FilePath>
             </File>
             <File>
-              <FileName>key.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\DStep\KEY\key.cpp</FilePath>
-            </File>
-            <File>
               <FileName>spi.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>.\DStep\SPI\spi.cpp</FilePath>
@@ -710,6 +700,16 @@
               <FileName>uart.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>.\DStep\UART\uart.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ExternalInterrupt.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\DStep\Interrupt\ExternalInterrupt.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ExternalInterrupt.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\DStep\Interrupt\ExternalInterrupt.h</FilePath>
             </File>
           </Files>
         </Group>
