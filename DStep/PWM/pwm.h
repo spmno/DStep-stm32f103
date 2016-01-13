@@ -5,5 +5,8 @@
 
 void PWM_Config(MOTROR_ControlType type);
 
+void analogWrite(u16 pin, u8 value);
+void analogFrequence(int frequence);
+
 #endif
 

@@ -4,7 +4,7 @@
 #define LED_PORT GPIO_Pin_8
 //#define LED_PORT GPIO_Pin_0
 
-static unsigned short pin_table[8] = {
+static unsigned short pin_table[15] = {
 	GPIO_Pin_15,
 	GPIO_Pin_3,
 	GPIO_Pin_4,
@@ -12,10 +12,17 @@ static unsigned short pin_table[8] = {
 	GPIO_Pin_6,
 	GPIO_Pin_7,
 	GPIO_Pin_8,
-	GPIO_Pin_9
+	GPIO_Pin_9,
+	GPIO_Pin_10,
+	GPIO_Pin_9,
+	GPIO_Pin_8,
+	GPIO_Pin_9,
+	GPIO_Pin_8,
+	GPIO_Pin_7,
+	GPIO_Pin_6
 };
 
-static GPIO_TypeDef* port_table[8] = {
+static GPIO_TypeDef* port_table[15] = {
 	GPIOA,
 	GPIOB,
 	GPIOB,
@@ -23,7 +30,14 @@ static GPIO_TypeDef* port_table[8] = {
 	GPIOB,
 	GPIOB,
 	GPIOB,
-	GPIOB
+	GPIOB,
+	GPIOA,
+	GPIOA,
+	GPIOA,
+	GPIOC,
+	GPIOC,
+	GPIOC,
+	GPIOC
 };
 
 // pin port, mode input, output, input_pullup
@@ -32,8 +46,10 @@ void pinMode(int pin, int mode)
 	GPIO_InitTypeDef GPIO_InitStructure;
 	if (port_table[pin] == GPIOA) {
 		RCC_APB2PeriphClockCmd( RCC_APB2Periph_GPIOA, ENABLE );
-	} else {
+	} else if(port_table[pin] == GPIOB){
 		RCC_APB2PeriphClockCmd( RCC_APB2Periph_GPIOB, ENABLE );
+	} else {
+		RCC_APB2PeriphClockCmd( RCC_APB2Periph_GPIOC, ENABLE );
 	}
 	
 	GPIO_InitStructure.GPIO_Pin = pin_table[pin];

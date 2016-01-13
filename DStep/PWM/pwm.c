@@ -60,28 +60,6 @@ static void TIM1_GPIO_Config(void)
 	
 }
 
-static void TIM1_GPIO_Config_With_GPIO(void)
-{
-	GPIO_InitTypeDef GPIO_InitStructure;
-	
-	//TIM1 ±÷”
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM1, ENABLE);
-	
-	//GPIOA∫ÕGPIOB
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA|RCC_APB2Periph_AFIO, ENABLE);
-	
-	//GPIO Configuration 
-		//GPIO A
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_10;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(GPIOA, &GPIO_InitStructure);
-	//GPIO B
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(GPIOB, &GPIO_InitStructure);
-}
 
 static void TIM3_Mode_Config(void)
 {
@@ -303,7 +281,7 @@ void PWM_Config(MOTROR_ControlType type)
 	if (type == PWM_CONTROL) {
 		TIM1_GPIO_Config();
 	} else {
-		TIM1_GPIO_Config_With_GPIO();
+		//TIM1_GPIO_Config_With_GPIO();
 	}
 	
 	TIM1_Mode_Config();
@@ -432,4 +410,14 @@ void TIM1_TRG_COM_IRQHandler(void)
 	}
 }
 
+
+void analogWrite(u16 pin, u8 value)
+{
+	
+}
+
+void analogFrequence(int frequence)
+{
+	
+}
 
