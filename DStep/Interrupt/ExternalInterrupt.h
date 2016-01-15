@@ -3,7 +3,12 @@
 
 void KEY_GPIO_Config(void);
 
-void attachInterrupt(u8 interupt, void (*userFunction)(void), int mode);
+#define RISING_FALLING 		EXTI_Trigger_Rising_Falling 
+#define RISING 						EXTI_Trigger_Rising  
+#define FALLING 					EXTI_Trigger_Falling
+
+void attachInterrupt(u8 pin, void (*userFunction)(void), int mode);
+void detachInterrupt(u8 pin);
 
 #endif
 

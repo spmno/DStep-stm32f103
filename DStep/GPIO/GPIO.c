@@ -37,6 +37,43 @@ static GPIO_TypeDef* port_table[15] = {
 	GPIOC
 };
 
+static u8 port_source_table[15] = {
+	GPIO_PortSourceGPIOA,
+	GPIO_PortSourceGPIOB,
+	GPIO_PortSourceGPIOB,
+	GPIO_PortSourceGPIOB,
+	GPIO_PortSourceGPIOB,
+	GPIO_PortSourceGPIOB,
+	GPIO_PortSourceGPIOB,
+	GPIO_PortSourceGPIOB,
+	GPIO_PortSourceGPIOA,
+	GPIO_PortSourceGPIOA,
+	GPIO_PortSourceGPIOA,
+	GPIO_PortSourceGPIOC,
+	GPIO_PortSourceGPIOC,
+	GPIO_PortSourceGPIOC,
+	GPIO_PortSourceGPIOC
+};
+
+static u8 pin_source_table[15] = {
+	GPIO_PinSource15,
+	GPIO_PinSource3,
+	GPIO_PinSource4,
+	GPIO_PinSource5,
+	GPIO_PinSource6,
+	GPIO_PinSource7,
+	GPIO_PinSource8,
+	GPIO_PinSource9,
+	GPIO_PinSource10,
+	GPIO_PinSource9,
+	GPIO_PinSource8,
+	GPIO_PinSource9,
+	GPIO_PinSource8,
+	GPIO_PinSource7,
+	GPIO_PinSource6
+};
+
+
 // pin port, mode input, output, input_pullup
 void pinMode(int pin, GPIOMode_TypeDef mode)
 {
@@ -53,6 +90,10 @@ void pinMode(int pin, GPIOMode_TypeDef mode)
 	GPIO_InitStructure.GPIO_Mode = mode;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(port_table[pin], &GPIO_InitStructure);
+	
+	if (mode == INPUT) {
+		GPIO_EXTILineConfig(port_source_table[pin], pin_source_table[pin]);
+	}
 }
 
 void digitalWrite(u16 pin, u8 value)

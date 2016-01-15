@@ -1,14 +1,51 @@
 #include "stm32f10x_conf.h"
 #include "ExternalInterrupt.h"
+#include "../PinDefine.h"
+#include <map>
 
-static void NVIC_Configuration(void)
+//using namespace std;
+
+//static map<u8, void (*)(void)> interruptFunction;
+
+static void (*interruptFunctionContainer[8])() ;
+
+u32 interruptLine[8] = {
+	EXTI_Line15,
+	EXTI_Line3,
+	EXTI_Line4,
+	EXTI_Line5,
+	EXTI_Line6,
+	EXTI_Line7,
+	EXTI_Line8,
+	EXTI_Line9
+};
+
+static void NVIC_Configuration(u8 pin)
 {
 
 	NVIC_InitTypeDef NVIC_InitStructure;
 
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
+	
+	switch(pin) {
+		case IO0:
+			NVIC_InitStructure.NVIC_IRQChannel = EXTI15_10_IRQn;
+		case IO1:
+			NVIC_InitStructure.NVIC_IRQChannel = EXTI3_IRQn;
+			break;
+		case IO2:
+			NVIC_InitStructure.NVIC_IRQChannel = EXTI4_IRQn;
+			break;
+		case IO3:
+		case IO4:
+		case IO5:
+		case IO6:
+		case IO7:
+			NVIC_InitStructure.NVIC_IRQChannel = EXTI9_5_IRQn;
+			break;
+	}
 
-	NVIC_InitStructure.NVIC_IRQChannel = EXTI15_10_IRQn;
+	
 
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
 
@@ -20,48 +57,17 @@ static void NVIC_Configuration(void)
 
 }
 
-void KEY_GPIO_Config(void)
-{
-
-	GPIO_InitTypeDef GPIO_InitStructure;
-
-	EXTI_InitTypeDef EXTI_InitStructure;
-
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC | RCC_APB2Periph_AFIO,ENABLE);
-
-	NVIC_Configuration();
-
-	/* EXTI line gpio config(PE5) */
-
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_15;
-
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD;  
-
-	GPIO_Init(GPIOC, &GPIO_InitStructure);
-
-
-	GPIO_EXTILineConfig(GPIO_PortSourceGPIOC, GPIO_PinSource15);
-
-	EXTI_InitStructure.EXTI_Line = EXTI_Line15;
-
-	EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
-
-	EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling; 
-
-	EXTI_InitStructure.EXTI_LineCmd = ENABLE;
-
-	EXTI_Init(&EXTI_InitStructure);
-
-}
 
 void EXTI3_IRQHandler(void)
 {
-	
+	EXTI_ClearFlag(EXTI_Line3);
+	EXTI_ClearITPendingBit(EXTI_Line3);
 }
 
 void EXTI4_IRQHandler(void)
 {
-	
+	EXTI_ClearFlag(EXTI_Line4);
+	EXTI_ClearITPendingBit(EXTI_Line4);
 }
 
 void EXTI9_5_IRQHandler(void)
@@ -104,6 +110,26 @@ void EXTI15_10_IRQHandler(void)
 	}if (EXTI_GetITStatus(EXTI_Line15) != RESET) {
 		EXTI_ClearFlag(EXTI_Line15);
 		EXTI_ClearITPendingBit(EXTI_Line15);
+		if (interruptFunctionContainer[0] != 0) {
+			interruptFunctionContainer[0]();
+		}
 	}
 }
 
+void attachInterrupt(u8 pin, void (*userFunction)(void), int mode)
+{
+	interruptFunctionContainer[pin] = userFunction;
+	EXTI_InitTypeDef EXTI_InitStructure;
+
+	NVIC_Configuration(pin);
+
+	EXTI_InitStructure.EXTI_Line = interruptLine[pin];
+
+	EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+
+	EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling; 
+
+	EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+
+	EXTI_Init(&EXTI_InitStructure);
+}

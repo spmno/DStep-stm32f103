@@ -711,6 +711,11 @@
               <FileType>5</FileType>
               <FilePath>.\DStep\Interrupt\ExternalInterrupt.h</FilePath>
             </File>
+            <File>
+              <FileName>PinDefine.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\DStep\PinDefine.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
