@@ -1,9 +1,6 @@
 #include <stm32f10x_conf.h>
 #include "GPIO.h"
 
-#define LED_PORT GPIO_Pin_8
-//#define LED_PORT GPIO_Pin_0
-
 static unsigned short pin_table[15] = {
 	GPIO_Pin_15,
 	GPIO_Pin_3,
@@ -41,7 +38,7 @@ static GPIO_TypeDef* port_table[15] = {
 };
 
 // pin port, mode input, output, input_pullup
-void pinMode(int pin, int mode)
+void pinMode(int pin, GPIOMode_TypeDef mode)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
 	if (port_table[pin] == GPIOA) {

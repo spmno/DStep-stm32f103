@@ -15,7 +15,7 @@ extern "C" {
 	
 
 // pin port, mode input, output, input_pullup
-void pinMode(int pin, int mode);
+void pinMode(int pin, GPIOMode_TypeDef mode);
 
 // pin port, value HIGH, LOW
 void digitalWrite(u16 pin, u8 value);
