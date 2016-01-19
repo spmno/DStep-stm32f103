@@ -716,6 +716,16 @@
               <FileType>5</FileType>
               <FilePath>.\DStep\PinDefine.h</FilePath>
             </File>
+            <File>
+              <FileName>serial.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\DStep\UART\serial.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>serial.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\DStep\UART\serial.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

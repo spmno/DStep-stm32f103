@@ -1059,16 +1059,31 @@ Section Cross References
     externalinterrupt.o(.ARM.exidx) refers to externalinterrupt.o(i._Z18EXTI9_5_IRQHandlerv) for i._Z18EXTI9_5_IRQHandlerv
     externalinterrupt.o(.ARM.exidx) refers to externalinterrupt.o(i._Z20EXTI15_10_IRQHandlerv) for i._Z20EXTI15_10_IRQHandlerv
     externalinterrupt.o(.ARM.exidx) refers to externalinterrupt.o(i._Z15attachInterrupthPFvvEi) for i._Z15attachInterrupthPFvvEi
+    serial.o(i._ZN7Serial14readEv) refers to stm32f10x_usart.o(i.USART_ReceiveData) for USART_ReceiveData
+    serial.o(i._ZN7Serial14readEv) refers to serial.o(.data) for Serial1::uartType
     serial.o(i._ZN7Serial15beginEi) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    serial.o(i._ZN7Serial15beginEi) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    serial.o(i._ZN7Serial15beginEi) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd) for RCC_APB1PeriphClockCmd
     serial.o(i._ZN7Serial15beginEi) refers to stm32f10x_usart.o(i.USART_Init) for USART_Init
     serial.o(i._ZN7Serial15beginEi) refers to stm32f10x_usart.o(i.USART_ITConfig) for USART_ITConfig
     serial.o(i._ZN7Serial15beginEi) refers to stm32f10x_usart.o(i.USART_Cmd) for USART_Cmd
     serial.o(i._ZN7Serial15beginEi) refers to serial.o(.data) for Serial1::txPin
+    serial.o(i._ZN7Serial15writeEc) refers to stm32f10x_usart.o(i.USART_SendData) for USART_SendData
+    serial.o(i._ZN7Serial15writeEc) refers to stm32f10x_usart.o(i.USART_GetFlagStatus) for USART_GetFlagStatus
+    serial.o(i._ZN7Serial15writeEc) refers to serial.o(.data) for Serial1::uartType
+    serial.o(i._ZN7Serial24readEv) refers to stm32f10x_usart.o(i.USART_ReceiveData) for USART_ReceiveData
+    serial.o(i._ZN7Serial24readEv) refers to serial.o(.data) for Serial2::uartType
     serial.o(i._ZN7Serial25beginEi) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    serial.o(i._ZN7Serial25beginEi) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd) for RCC_APB1PeriphClockCmd
     serial.o(i._ZN7Serial25beginEi) refers to stm32f10x_usart.o(i.USART_Init) for USART_Init
     serial.o(i._ZN7Serial25beginEi) refers to stm32f10x_usart.o(i.USART_ITConfig) for USART_ITConfig
     serial.o(i._ZN7Serial25beginEi) refers to stm32f10x_usart.o(i.USART_Cmd) for USART_Cmd
     serial.o(i._ZN7Serial25beginEi) refers to serial.o(.data) for Serial2::txPin
+    serial.o(i._ZN7Serial25printEPc) refers to stm32f10x_usart.o(i.USART_SendData) for USART_SendData
+    serial.o(i._ZN7Serial25printEPc) refers to serial.o(.data) for Serial2::uartType
+    serial.o(i._ZN7Serial25writeEc) refers to stm32f10x_usart.o(i.USART_SendData) for USART_SendData
+    serial.o(i._ZN7Serial25writeEc) refers to stm32f10x_usart.o(i.USART_GetFlagStatus) for USART_GetFlagStatus
+    serial.o(i._ZN7Serial25writeEc) refers to serial.o(.data) for Serial2::uartType
     serial.o(.ARM.exidx) refers to serial.o(i._ZN7Serial15beginEi) for i._ZN7Serial15beginEi
     serial.o(.ARM.exidx) refers to serial.o(i._ZN7Serial14readEv) for i._ZN7Serial14readEv
     serial.o(.ARM.exidx) refers to serial.o(i._ZN7Serial15writeEc) for i._ZN7Serial15writeEc
@@ -1590,14 +1605,14 @@ Removing Unused input sections from the image.
     Removing serial.o(.rev16_text), (4 bytes).
     Removing serial.o(.revsh_text), (4 bytes).
     Removing serial.o(.rrx_text), (6 bytes).
-    Removing serial.o(i._ZN7Serial14readEv), (2 bytes).
-    Removing serial.o(i._ZN7Serial15beginEi), (152 bytes).
+    Removing serial.o(i._ZN7Serial14readEv), (20 bytes).
+    Removing serial.o(i._ZN7Serial15beginEi), (172 bytes).
     Removing serial.o(i._ZN7Serial15printEPc), (2 bytes).
-    Removing serial.o(i._ZN7Serial15writeEc), (2 bytes).
-    Removing serial.o(i._ZN7Serial24readEv), (2 bytes).
-    Removing serial.o(i._ZN7Serial25beginEi), (148 bytes).
-    Removing serial.o(i._ZN7Serial25printEPc), (2 bytes).
-    Removing serial.o(i._ZN7Serial25writeEc), (2 bytes).
+    Removing serial.o(i._ZN7Serial15writeEc), (36 bytes).
+    Removing serial.o(i._ZN7Serial24readEv), (20 bytes).
+    Removing serial.o(i._ZN7Serial25beginEi), (160 bytes).
+    Removing serial.o(i._ZN7Serial25printEPc), (32 bytes).
+    Removing serial.o(i._ZN7Serial25writeEc), (36 bytes).
     Removing serial.o(.ARM.exidx), (8 bytes).
     Removing serial.o(.ARM.exidx), (8 bytes).
     Removing serial.o(.ARM.exidx), (8 bytes).
@@ -1606,7 +1621,7 @@ Removing Unused input sections from the image.
     Removing serial.o(.ARM.exidx), (8 bytes).
     Removing serial.o(.ARM.exidx), (8 bytes).
     Removing serial.o(.ARM.exidx), (8 bytes).
-    Removing serial.o(.data), (24 bytes).
+    Removing serial.o(.data), (32 bytes).
     Removing misc.o(.rev16_text), (4 bytes).
     Removing misc.o(.revsh_text), (4 bytes).
     Removing misc.o(.rrx_text), (6 bytes).
@@ -2136,7 +2151,7 @@ Removing Unused input sections from the image.
     Removing system_stm32f10x.o(i.SystemCoreClockUpdate), (164 bytes).
     Removing system_stm32f10x.o(.data), (20 bytes).
 
-844 unused section(s) (total 43702 bytes) removed from the image.
+844 unused section(s) (total 43876 bytes) removed from the image.
 
 ==============================================================================
 
