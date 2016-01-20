@@ -16,13 +16,21 @@ protected:
 };
 */
 
+#define Serial0	DStepSerial0::getInstance()
+#define Serial1 DStepSerial1::getInstance()
+
 //uart5 tx pc12 rx pd2
-class Serial1 //: Serial
+class DStepSerial0 //: Serial
 {
+public:
 	static void begin(int baudrate);
 	static u8 read();
 	static void write(char ch);
 	static void print(char* string);
+	static DStepSerial0 getInstance() {
+		static DStepSerial0 serial;
+		return serial;
+	}
 protected:
 	static unsigned short rxPin;
 	static unsigned short txPin;
@@ -32,12 +40,17 @@ protected:
 };
 
 //uart4 tx pc10 rx pc11
-class Serial2 //: Serial
+class DStepSerial1 //: Serial
 {
+public:
 	static void begin(int baudrate);
 	static u8 read();
 	static void write(char ch);
 	static void print(char* string);
+	static DStepSerial1 getInstance() {
+		static DStepSerial1 serial;
+		return serial;
+	}
 protected:
 	static unsigned short rxPin;
 	static unsigned short txPin;

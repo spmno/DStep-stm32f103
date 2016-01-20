@@ -9,7 +9,7 @@
 #include "Interrupt/ExternalInterrupt.h"
 #include "PWM/pwm.h"
 #include "Motor/motor.h"
-#include "Uart/uart.h"
+#include "Uart/serial.h"
 #include "SPI/spi.h"
 #include "Temperature/Temperature.h"
 
