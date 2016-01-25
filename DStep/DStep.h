@@ -12,6 +12,7 @@
 #include "Uart/serial.h"
 #include "SPI/spi.h"
 #include "Temperature/Temperature.h"
+#include "PinDefine.h"
 
 //free rt os
 #include "FreeRTOS.h"  

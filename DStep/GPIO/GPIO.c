@@ -1,6 +1,10 @@
 #include <stm32f10x_conf.h>
 #include "GPIO.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 static unsigned short pin_table[15] = {
 	GPIO_Pin_15,
 	GPIO_Pin_3,
@@ -109,4 +113,8 @@ u8 digitalRead(u16 pin)
 {
 	return GPIO_ReadInputDataBit(port_table[pin], pin_table[pin]);
 }
+
+#ifdef __cplusplus
+}
+#endif
 

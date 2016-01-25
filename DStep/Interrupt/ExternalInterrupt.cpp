@@ -6,6 +6,9 @@
 //using namespace std;
 
 //static map<u8, void (*)(void)> interruptFunction;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 static void (*interruptFunctionContainer[8])() ;
 
@@ -30,6 +33,7 @@ static void NVIC_Configuration(u8 pin)
 	switch(pin) {
 		case IO0:
 			NVIC_InitStructure.NVIC_IRQChannel = EXTI15_10_IRQn;
+			break;
 		case IO1:
 			NVIC_InitStructure.NVIC_IRQChannel = EXTI3_IRQn;
 			break;
@@ -116,7 +120,7 @@ void EXTI15_10_IRQHandler(void)
 	}
 }
 
-void attachInterrupt(u8 pin, void (*userFunction)(void), int mode)
+void attachInterrupt(u8 pin, void (*userFunction)(void), EXTITrigger_TypeDef mode)
 {
 	interruptFunctionContainer[pin] = userFunction;
 	EXTI_InitTypeDef EXTI_InitStructure;
@@ -133,3 +137,7 @@ void attachInterrupt(u8 pin, void (*userFunction)(void), int mode)
 
 	EXTI_Init(&EXTI_InitStructure);
 }
+
+#ifdef __cplusplus
+}
+#endif
