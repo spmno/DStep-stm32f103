@@ -1,6 +1,10 @@
 #ifndef _DSTEP_SERIAL_H_
 #define _DSTEP_SERIAL_H_
 #include "stm32f10x_conf.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 /*
 class Serial
 {
@@ -58,5 +62,9 @@ protected:
 	static GPIO_TypeDef* txGpioType;
 	static USART_TypeDef* uartType;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
