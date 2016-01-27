@@ -16,6 +16,22 @@
 #define PWM4					12
 #define PWM5					13
 #define PWM6					14
+#define A0						15
+#define A1						16
+#define A2						17
+#define A3						18
+#define A4						19
+#define A5						20
+#define A6						21
+#define A7						22
+#define A8						23
+#define A9						24
+#define A10						25
+#define A11						26
+#define A12						27
+#define A13						28
+#define A14						29
+#define A15						30
 
 
 #endif
