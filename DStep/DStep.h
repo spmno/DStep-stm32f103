@@ -13,6 +13,7 @@
 #include "SPI/spi.h"
 #include "Temperature/Temperature.h"
 #include "PinDefine.h"
+#include "ADC/ADC.h"
 
 //free rt os
 #include "FreeRTOS.h"  

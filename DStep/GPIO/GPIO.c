@@ -175,6 +175,7 @@ void adcInit()
 void pinMode(int pin, GPIOMode_TypeDef mode)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
+	 
 	if (port_table[pin] == GPIOA) {
 		RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO,ENABLE);
 		GPIO_PinRemapConfig(GPIO_Remap_SWJ_JTAGDisable,ENABLE);
@@ -201,7 +202,7 @@ void pinMode(int pin, GPIOMode_TypeDef mode)
 		RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE );	  
 		
 		//AD采样时钟72M/6=12M,不能超过14M，否则精度下降
-		RCC_ADCCLKConfig(RCC_PCLK2_Div6);  
+		RCC_ADCCLKConfig(RCC_PCLK2_Div8); 
 		adcInit();
 	}
 

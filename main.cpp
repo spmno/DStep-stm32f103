@@ -37,6 +37,10 @@ void test()
 	digitalWrite(IO6, HIGH);
 	digitalWrite(IO7, HIGH);
 	
+	pinMode(A0, ANALOG_INPUT);
+	//Adc_Init();
+	u16 ad_value = analogRead(A0);
+	
 }
 
 int main()
@@ -47,8 +51,11 @@ int main()
 	if (! uiTraceStart() ) {
 		vTraceConsoleMessage("Could not start recorder!");
 	}
-	//LED_GPIO_Config();
 
+	pinMode(A13, ANALOG_INPUT);
+	//Adc_Init();
+	u16 value = analogRead(A13);
+	float v = value*3.3/0xfff;
 	//attachInterrupt(IO0, interrupt1, EXTI_Trigger_Rising_Falling);
 	Temperature_Config();
 	adc_value = Get_Temperature();
