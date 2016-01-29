@@ -14,6 +14,9 @@ void test()
 	DStepSerial1::begin(9600);
 	DStepSerial1::write('8');
 	value = DStepSerial1::read();
+	DStepSerial2::begin(9600);
+	DStepSerial2::write('8');
+	value = DStepSerial2::read();
 	
 	pinMode(IO0, OUTPUT);
 	digitalWrite(IO0, LOW);
@@ -52,10 +55,7 @@ int main()
 		vTraceConsoleMessage("Could not start recorder!");
 	}
 
-	pinMode(A13, ANALOG_INPUT);
-	//Adc_Init();
-	u16 value = analogRead(A13);
-	float v = value*3.3/0xfff;
+
 	//attachInterrupt(IO0, interrupt1, EXTI_Trigger_Rising_Falling);
 	Temperature_Config();
 	adc_value = Get_Temperature();

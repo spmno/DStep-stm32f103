@@ -63,6 +63,27 @@ protected:
 	static USART_TypeDef* uartType;
 };
 
+
+//usart3 tx pb10 rx pb11
+class DStepSerial2 //: Serial
+{
+public:
+	static void begin(int baudrate);
+	static u8 read();
+	static void write(char ch);
+	static void print(char* string);
+	static DStepSerial2 getInstance() {
+		static DStepSerial2 serial;
+		return serial;
+	}
+protected:
+	static unsigned short rxPin;
+	static unsigned short txPin;
+	static GPIO_TypeDef* rxGpioType;
+	static GPIO_TypeDef* txGpioType;
+	static USART_TypeDef* uartType;
+};
+
 #ifdef __cplusplus
 }
 #endif
