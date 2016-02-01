@@ -33,6 +33,7 @@
 #define A14						29
 #define A15						30
 
+#define PWM_PIN_START	8	
 #define ADC_PIN_START	15
 
 #endif

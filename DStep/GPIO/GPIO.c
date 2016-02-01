@@ -179,7 +179,7 @@ void pinMode(int pin, GPIOMode_TypeDef mode)
 	if (port_table[pin] == GPIOA) {
 		RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO,ENABLE);
 		GPIO_PinRemapConfig(GPIO_Remap_SWJ_JTAGDisable,ENABLE);
-		RCC_APB2PeriphClockCmd( RCC_APB2Periph_GPIOA, ENABLE );
+		RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE );
 	} else if(port_table[pin] == GPIOB){
 		if ((pin_table[pin] == GPIO_Pin_3)||(pin_table[pin] == GPIO_Pin_4)) {
 			RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO,ENABLE);
@@ -204,8 +204,7 @@ void pinMode(int pin, GPIOMode_TypeDef mode)
 		//AD采样时钟72M/6=12M,不能超过14M，否则精度下降
 		RCC_ADCCLKConfig(RCC_PCLK2_Div8); 
 		adcInit();
-	}
-
+	} 
 }
 
 void digitalWrite(u16 pin, u8 value)

@@ -2,6 +2,10 @@
 #include "pwm.h"
 #include "../PinDefine.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 
 void timeModeConfig(TIM_TypeDef* timer, u8 channel, u8 value) 
 {
@@ -101,3 +105,11 @@ void analogFrequence(int frequence)
 	
 }
 
+void timeMode(u16 pin)
+{
+	
+}
+
+#ifdef __cplusplus
+}
+#endif
