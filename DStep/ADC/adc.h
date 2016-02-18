@@ -1,5 +1,5 @@
-#ifndef _MOTOR_ADC_H_
-#define _MOTOR_ADC_H	_
+#ifndef _DSTEP_ADC_H_
+#define _DSTEP_ADC_H_	_
 #include "stm32f10x.h"
 
 #define AD0			0

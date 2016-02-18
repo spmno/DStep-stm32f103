@@ -51,7 +51,6 @@ void timeModeConfig(TIM_TypeDef* timer, u8 channel, u8 value)
 	TIM_ARRPreloadConfig(TIM1, ENABLE);
 	TIM_Cmd(TIM1, ENABLE);
 	TIM_CtrlPWMOutputs(TIM1, ENABLE);
-	
 }
 
 
