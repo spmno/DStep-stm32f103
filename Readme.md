@@ -9,8 +9,8 @@ write:
 <br>
 <code>
 pinMode(IO0, OUTPUT);  <br>
-digitalWrite(IO0, LOW); <br>
-</code>
+digitalWrite(IO0, LOW);<br>
+</code><br>
 read:<br>
 <code>
 pinMode(IO0, INPUT);  
