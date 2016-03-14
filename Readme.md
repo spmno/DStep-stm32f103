@@ -6,14 +6,20 @@ IO
 ----
 <p>
 write:
+<br>
 <code>
 pinMode(IO0, OUTPUT);
+<br>
 digitalWrite(IO0, LOW);
+<br>
 </code>
 read:
+<br>
 <code>
 pinMode(IO0, INPUT);
+<br>
 u8 value = digitalRead(IO0);
+<br>
 </code>
 </p>
 Serial Port
