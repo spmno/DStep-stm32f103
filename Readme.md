@@ -8,13 +8,10 @@ IO
 write:
 <br>
 <code>
-pinMode(IO0, OUTPUT);  
-<br>
-digitalWrite(IO0, LOW);  
-<br>
+pinMode(IO0, OUTPUT);  <br>
+digitalWrite(IO0, LOW); <br>
 </code>
-read:  
-<br>
+read:  <br>
 <code>
 pinMode(IO0, INPUT);  
 <br>
