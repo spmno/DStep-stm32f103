@@ -7,36 +7,32 @@ IO
 <p>
 write:
 <br>
-<code>
-pinMode(IO0, OUTPUT);  <br>
-</code>
-<code>
-digitalWrite(IO0, LOW);<br>
-</code><br>
+<code>pinMode(IO0, OUTPUT);</code><br>
+<code>digitalWrite(IO0, LOW);</code><br>
 read:<br>
-<code>
-pinMode(IO0, INPUT);  
-<br>
-u8 value = digitalRead(IO0);  
-<br>
-</code>
+<code>pinMode(IO0, INPUT);</code><br>
+<code>u8 value = digitalRead(IO0);</code><br>
 </p>
+
 Serial Port
 -----------
 <p>
-DStepSerial0::begin(9600);
-DStepSerial0::write('8');
-u8 value = DStepSerial0::read();
+<code>DStepSerial0::begin(9600);</code><br>
+<code>DStepSerial0::write('8');</code><br>
+<code>u8 value = DStepSerial0::read();</code><br>
 </p>
+
 <p>
 AD
 ----
-pinMode(A0, ANALOG_INPUT);
-u16 ad_value = analogRead(A0);
+<code>pinMode(A0, ANALOG_INPUT);</code><br>
+<code>u16 ad_value = analogRead(A0);</code><br>
 </p>
+
 <p>
 PWM
 ----
-pinMode(PWM0, ANALOG_OUTPUT);
-analogWrite(PWM0, 50);
+<code>pinMode(PWM0, ANALOG_OUTPUT);</code><br>
+<code>analogWrite(PWM0, 50);</code><br>
 </p>
+<br>
