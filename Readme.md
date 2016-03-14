@@ -22,16 +22,16 @@ Serial Port
 <code>u8 value = DStepSerial0::read();</code><br>
 </p>
 
-<p>
 AD
 ----
+<p>
 <code>pinMode(A0, ANALOG_INPUT);</code><br>
 <code>u16 ad_value = analogRead(A0);</code><br>
 </p>
 
-<p>
 PWM
 ----
+<p>
 <code>pinMode(PWM0, ANALOG_OUTPUT);</code><br>
 <code>analogWrite(PWM0, 50);</code><br>
 </p>
