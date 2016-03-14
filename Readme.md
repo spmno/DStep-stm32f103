@@ -8,17 +8,17 @@ IO
 write:
 <br>
 <code>
-pinMode(IO0, OUTPUT);
+pinMode(IO0, OUTPUT);  
 <br>
-digitalWrite(IO0, LOW);
+digitalWrite(IO0, LOW);  
 <br>
 </code>
-read:
+read:  
 <br>
 <code>
-pinMode(IO0, INPUT);
+pinMode(IO0, INPUT);  
 <br>
-u8 value = digitalRead(IO0);
+u8 value = digitalRead(IO0);  
 <br>
 </code>
 </p>
