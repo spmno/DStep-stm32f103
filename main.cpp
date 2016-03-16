@@ -40,9 +40,48 @@ void test()
 	digitalWrite(IO6, HIGH);
 	digitalWrite(IO7, HIGH);
 	
+	digitalWrite(IO0, LOW);
+	digitalWrite(IO1, LOW);
+	digitalWrite(IO2, LOW);
+	digitalWrite(IO3, LOW);
+	digitalWrite(IO4, LOW);
+	digitalWrite(IO5, LOW);
+	digitalWrite(IO6, LOW);
+	digitalWrite(IO7, LOW);
+	
 	pinMode(A0, ANALOG_INPUT);
-	//Adc_Init();
+	pinMode(A1, ANALOG_INPUT);
+	pinMode(A2, ANALOG_INPUT);
+	pinMode(A3, ANALOG_INPUT);
+	pinMode(A4, ANALOG_INPUT);
+	pinMode(A5, ANALOG_INPUT);
+	pinMode(A6, ANALOG_INPUT);
+	pinMode(A7, ANALOG_INPUT);
+	pinMode(A8, ANALOG_INPUT);
+	pinMode(A9, ANALOG_INPUT);
+	pinMode(A10, ANALOG_INPUT);
+	pinMode(A11, ANALOG_INPUT);
+	pinMode(A12, ANALOG_INPUT);
+	pinMode(A13, ANALOG_INPUT);
+	pinMode(A14, ANALOG_INPUT);
+	pinMode(A15, ANALOG_INPUT);
+	
 	u16 ad_value = analogRead(A0);
+	ad_value = analogRead(A1);
+	ad_value = analogRead(A2);
+	ad_value = analogRead(A3);
+	ad_value = analogRead(A4);
+	ad_value = analogRead(A5);
+	ad_value = analogRead(A6);
+	ad_value = analogRead(A7);
+	ad_value = analogRead(A8);
+	ad_value = analogRead(A9);
+	ad_value = analogRead(A10);
+	ad_value = analogRead(A11);
+	ad_value = analogRead(A12);
+	ad_value = analogRead(A13);
+	ad_value = analogRead(A14);
+	ad_value = analogRead(A15);
 	
 }
 
@@ -55,7 +94,7 @@ int main()
 		vTraceConsoleMessage("Could not start recorder!");
 	}
 
-
+	test();
 	//attachInterrupt(IO0, interrupt1, EXTI_Trigger_Rising_Falling);
 	Temperature_Config();
 	adc_value = Get_Temperature();
